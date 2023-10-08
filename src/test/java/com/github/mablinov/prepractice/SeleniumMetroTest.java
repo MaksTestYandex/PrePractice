@@ -62,6 +62,14 @@ public class SeleniumMetroTest {
 
         Assert.assertEquals(STATION_LUBYANKA, metroPage.getRouteStationFrom());
     }
+    // проверь отображение станции «Куда» в карточке маршрута
+    @Test
+    public void checkRouteStationToIsCorrect() {
+        // открой браузер
+        metroPage.buildRoute(STATION_LUBYANKA, STATION_KRASNOGVARD);
+        // проверили, что отображается корректное название станции начала маршрута
+        Assert.assertEquals(STATION_KRASNOGVARD, metroPage.getRouteStationTo());
+    }
 
     // добавь метод с аннотацией After для закрытия браузера
     @After
