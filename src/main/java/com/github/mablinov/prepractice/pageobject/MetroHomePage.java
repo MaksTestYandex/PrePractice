@@ -43,7 +43,7 @@ public class MetroHomePage {
         // кликни по выпадающему списку городов
         driver.findElement(selectCityButton).click();
         // выбери город, переданный в параметре метода
-        driver.findElement(By.xpath(".//li[@class = 'select-item_metro _init _selected']/span[text()='" + cityName + "']")).click();
+        driver.findElement(By.xpath(".//*[text() = '" + cityName + "']")).click();
     }
 
     // метод ввода названия станции в поле «Откуда»
